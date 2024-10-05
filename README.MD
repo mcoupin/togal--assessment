@@ -60,3 +60,19 @@ To run the tests, use the following command:
 ```sh
 npm test
 ```
+
+## Build the application with docker
+
+Use docker compose.
+
+To build the application:
+
+```sh
+docker-compose build
+```
+
+And to run it:
+
+```sh
+docker-compose up
+```
