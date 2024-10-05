@@ -11,7 +11,8 @@ const HomePage = () => {
 
   if (isPending) return "Loading...";
 
-  if (error) return "An error has occurred: " + error.message;
+  if (error && error.status !== 204)
+    return "An error has occurred: " + error.message;
   return (
     <Grid container spacing={3}>
       <NewFolder />

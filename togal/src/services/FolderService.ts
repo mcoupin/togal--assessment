@@ -14,6 +14,6 @@ export default class FolderService {
     body: Folder[];
   }> {
     const folders = await AppDataSource.manager.find(Folder);
-    return { status: folders.length === 0 ? 204 : 200, body: folders };
+    return { status: 200, body: folders };
   }
 }

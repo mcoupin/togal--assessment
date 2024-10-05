@@ -3,17 +3,13 @@ FROM node:18-alpine
 
 WORKDIR /app-front
 
-COPY package*.json ./
+COPY package*.json .
 
 RUN npm install
 
 COPY . .
 
-RUN npm run build
-
-RUN npm install -g serve
-
-EXPOSE 3000
+EXPOSE 8080
 
 
 CMD ["npm", "start"]
